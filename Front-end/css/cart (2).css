@@ -1,0 +1,140 @@
+#table{
+    width: 80%;
+    text-align: center;
+    margin-top: 80px;
+    font-family:sans-serif;
+    
+}
+tr{
+    height: 50px;
+    border-bottom: 1px solid rgb(204, 200, 200);
+}
+button{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(64, 65, 58);
+    color: white;
+}
+.exitbtn , .disableExitBtn{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(64, 65, 58);
+    color: white;
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+th{
+    font-size: 20px;
+}
+span {
+    font-size: 20px;
+    margin: 4px;
+}
+
+.four::after { 
+    content: " $";
+    font-size: 20px ;
+}
+.four{
+    font-size: 20px;
+}
+p{
+    width: 25px;
+    height: 25px;
+    background-color:#8fa2c4;
+    border-radius: 10px;
+    /* color: wheat; */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*test*/
+.item-card {
+    transition: box-shadow 0.3s;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+
+.item-card:hover {
+    box-shadow: 4px 16px 20px 3px rgba(18, 18, 20, 0.144);
+}
+
+.carousel-item img {
+    height: 300px;
+}
+
+.carousel-indicators>li {
+    padding: 5px;
+}
+
+.carousel-indicators>li.active {
+    background-color: aqua;
+}
+
+.bro {
+    border-bottom: 2px solid blue;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.cr {
+    width: 100%;
+}
+
+.lin {
+    text-decoration: none;
+    color: black;
+}
+
+.lin:hover {
+    color: black;
+}
+
+.gr {
+    color: grey;
+}
+
+.form-inline {
+    right: 0;
+    position: absolute;
+    margin-right: 5px;
+}
+
+.displ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.linkpage {
+    background-color: #212529;
+}
+
+footer {
+    
+    background-color: #3e4551;
+}
+
+#signOutOrSignIn{
+    cursor:pointer;
+}

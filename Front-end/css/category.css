@@ -1,0 +1,83 @@
+.item-card {
+  transition: box-shadow 0.3s;
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+
+.item-card:hover {
+  box-shadow: 4px 16px 20px 3px rgba(18, 18, 20, 0.144);
+}
+
+.carousel-item img {
+  height: 300px;
+}
+
+.carousel-indicators > li {
+  padding: 5px;
+}
+
+.carousel-indicators > li.active {
+  background-color: aqua;
+}
+
+.bro {
+  border-bottom: 2px solid blue;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.cr {
+  width: 100%;
+}
+
+.lin {
+  text-decoration: none;
+  color: black;
+}
+
+.lin:hover {
+  color: black;
+}
+
+.gr {
+  color: grey;
+}
+
+.form-inline {
+  right: 0;
+  position: absolute;
+  margin-right: 5px;
+}
+
+.displ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkpage {
+  background-color: #212529;
+}
+
+footer {
+  background-color: #3e4551;
+}
+
+#signOutOrSignIn {
+  cursor: pointer;
+}
+.sucsess {
+<<<<<<< HEAD
+  border: 5px solid red;
+=======
+  border: 2px solid #3ac51d;
+}
+
+a{
+  cursor: pointer;
+>>>>>>> e5ddcb90d9de19a42ec640e32b7ce12defb68264
+}

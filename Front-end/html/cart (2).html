@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--bootstrab file-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="icon" href="images/headerIcon.PNG" type="image/x-icon">
+    <link rel="icon" href="../public/cat-images/headerIcon.PNG" type="image/x-icon">
+    <script>
+        //====================================== Check authorization and authentication ===========================//
+        // Get user role and token from local_storage
+        const user_role = localStorage.user_role;
+        const token = localStorage.token;
+  
+        if (user_role != 1 || !token) {
+          location.assign('/html/login.html');
+        };
+    </script>
+    <link rel="stylesheet" href="../css/cart.css">
+    <title>cart</title>
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light scrolling-navbar white fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-md-4">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">
+                        <i class="farfa-bookmark"></i> Home page
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/category.html">
+                        <i class="far fa-hand-pointer"></i> catogrey page
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/cart.html">
+                        <i class="fas fa-shopping-cart"></i> cart page
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-item mx-md-4">
+            <a class="nav-link" href="/html/setting.html">
+                <i class="fas fa-cog blue-text"></i>Settings
+            </a>
+        </div>
+        <div class="nav-item dropdown mx-md-4">
+            <a  href="#" id="navbarDropdown" >
+                <i class="fas fa-user"></i>New User
+            </a>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+
+    <table id='table' class='container'>
+        <tr>
+            <th></th>
+            <th>product</th>
+            <th>color</th>
+            <th>price</th>
+            <th>QTY</th>
+            <th>Status</th>
+            <th>Exit</th>
+        </tr>
+    </table>
+    <script src="../js/jquery.js"></script>
+    
+    <script src="../js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

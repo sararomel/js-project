@@ -1,0 +1,49 @@
+body{
+    background-image: url('../public/image/register.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+#form{
+    width: 40vw;
+    margin: 192px auto;
+    background-color: none;
+    color: white;
+}
+
+.btn{
+    background-color: #7b3212;
+}
+
+.btn:hover{
+    background-color: rgb(88, 121, 88);
+    color: rgb(220 174 174) !important;
+}
+
+span{
+    display: none;
+    color:#ff6464 !important;
+}
+
+.error {
+    border: 3px solid #ff6464;
+}
+
+.success {
+    border: 3px solid green;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.alert{
+    display: none;
+  }

@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(107 115 112);
+}
+
+#back{
+    cursor: pointer;
+}
+
+#container{
+    background-color: rgb(231, 228, 224) ; 
+    margin: auto;
+    box-shadow: 8px 10px 8px 10px #8b8989;
+    
+}
+
+button:hover{
+    background-color:rgb(153, 158, 153);
+}
+
+small{
+    color:red;
+    display: none;
+}

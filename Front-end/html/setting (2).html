@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="icon" href="../public/cat-images/headerIcon.PNG" type="image/x-icon">
+  <link rel="stylesheet" href="../css/setting.css" />
+  <title>Setting</title>
+  <script>
+      //====================================== Check authorization and authentication ===========================//
+      // Get user role and token from local_storage
+      const user_role = localStorage.user_role;
+      const token = localStorage.token;
+
+      if (user_role != 1 || !token) {
+        location.assign('/html/login.html');
+      };
+  </script>
+</head>
+
+<body>
+  <!-- update email -->
+  <i class=" fa fa-arrow-circle-left fa-3x m-5 exit text-light " id="back"></i>
+  <div class="card text-center w-50" id="container">
+    <div class="card-header">
+      <h2 class="pull-left">SETTING</h2>
+    </div>
+    <div class="card-body">
+      <p class="fw-bold h3 text-uppercase">personal information</p>
+      <h4 class="pull-left ">Name</h4>
+      <button class="btn fa fa-pencil pull-right rounded-circle" data-bs-toggle="modal"
+        data-bs-target="#exampleModal"></button>
+      <br /><br>
+      <p class="pull-left text-muted userName"></p>
+      <br /><br />
+      <h4 class="text-dark pull-left ">Your Email</h4>
+      <br /><br>
+      <p class="pull-left text-muted email"></p>
+      <br /><br /><br />
+      <h4 class="text-dark pull-left"> Password</h4>
+      <button class="btn fa fa-pencil pull-right rounded-circle" data-bs-toggle="modal"
+        data-bs-target="#passwordModal"></button><br /><br>
+      <p class="text-muted fw-bold pull-left"> *********</p>
+      <p class="fw-bold text-uppercase h3  mt-5">contact information</p>
+      <h4 class="text-dark pull-left">Phone Number</h4>
+      <button class="btn fa fa-pencil pull-right rounded-circle" data-bs-toggle="modal"
+        data-bs-target="#phoneModal"></button><br /><br>
+      <p class="pull-left text-muted phone"> </p>
+      <br /><br /><br />
+      <h4 class="text-dark pull-left">Location</h4>
+      <br /><br>
+      <p class=" pull-left text-muted city"></p>
+
+    </div>
+    <!-- Model to update email -->
+    <form id="form" action="">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label class="pull-left">User Name</label><br />
+              <input type="text" name='username' id="username" class="form-control first" />
+              <small id='userNameErr'class='pull-left smallOne'>enter at least 6 letter</small><br>
+              <label class="pull-left">Email</label><br />
+              <input type="email" id='email' name='email' class="form-control second" />
+              <small id='emailErr'class='pull-left smallTwo'>email is not valid</small><br>
+              <label class="pull-left">password</label><br />
+              <input type="password" id='password' name='password' class="form-control third" />
+              <small id="passwordErr" class="pull-left smallTree">password is not correct</small><br>
+            </div>
+            <div class="modal-footer">
+              <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="close">
+              </input>
+              <input type="button" id='one' class="btn btn-primary" value="Save changes"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- model to update password -->
+    <form id='formTwo'>
+      <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit password</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label class="pull-left fw-bold h6">Current Password</label><br />
+              <input type="password" class="form-control" name='password'id='inputpassword' />
+              <small class="pull-left" id='passwordTwo'>password is not correct</small><br>
+              <label class="pull-left fw-bold h6">New Password</label><br />
+              <input type="password" class="form-control" name='new_password' id='inputNewPassword'/>
+              <small id='newpasswordErr' class="pull-left">your email is not valid</small><br>
+              <label class="pull-left fw-bold h6">Confirm New Password</label><br />
+              <input type="password" class="form-control" name='confirm_password' id='inputConfirmPassword'/>
+              <small class='pull-left' id='confirmpasswordErr'>password is not matching</small><br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <input type="button" id='two' class="btn btn-primary" value="Save Change"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form action="" id='formThree'>
+      <div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update contact information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label class='pull-left'>Phone</label><br />
+              <input type="text" class="form-control" name='phone_number' id='phone_number'/>
+              <small class="pull-left" id='phoneNumberErr'>enter 11 number</small><br>
+              <label class="text-dark pull-left">Location</label><br />
+              <input type="text" class="form-control" name='city' id='city'/>
+              <small class='pull-left' id='cityErr'>enter your city</small><br>
+              <label class='pull-left'>password</label><br />
+              <input type="password" class="form-control" name='password' id='confirmPass'/>
+              <small class='pull-left' id='passwordErrTwo'>password is not matching</small><br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <input type="button" id='three' class="btn btn-primary" value="Save changes"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"></script>
+  <script src="../js/jquery.js"></script>
+  <script type="module" src="../js/setting.js" ></script>
+
+
+</body>
+
+</html>
